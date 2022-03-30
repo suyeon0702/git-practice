@@ -1,0 +1,17 @@
+extends base.pug
+include mixins/regions
+
+block head 
+    title Region List
+
+block content 
+    h1 Region List:
+    each region in regions
+        +regions(region)
+    else 
+        li Sorry nothing found.
+    a(class='button' href='/regions/add') ADD
+    br
+    a(class='button' href='/regions/delete') DELETE
+    br
+    a(class='button' href='/') HOME

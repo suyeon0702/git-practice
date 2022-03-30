@@ -1,0 +1,32 @@
+extends base.pug
+
+block head
+    h1 Edit Informations
+
+block content
+    form(method="POST", action="/edit_process")
+        input(placeholder="학번", required, type="text", name="STnumber", value=info.STnumber)
+        input(placeholder="이름", required, type='text', name='Name', value=info.Name)
+        input(placeholder="성별", required, type='text', name='Gender', value=info.Gender)
+        input(placeholder="희망하는 만날 지역", required, type="text", name="Field", value=info.Field.join(","))
+        input(placeholder="인스타그램 ID", type='text', name='instagramID', value=info.instagramID)
+        input(placeholder="카카오톡 ID", required, type="text", name="kakaoID", value=info.kakaoID)
+        input(placeholder="매칭 종류", required, type="text", name="KoM", value=info.KoM)
+        input(placeholder="자신의 MBTI", required, type='text', name='OwnMBTI', value=info.OwnMBTI)
+        input(placeholder="원하는 상대방의 MBTI", type='text', name='WantedMBTI', value=info.WantedMBTI.join(","))
+        input(placeholder="전공", required, type="text", name="Major", value=info.Major)
+        input(placeholder="병역 여부", required, type='text', name='MilitaryService', value=String(info.MilitaryService))
+        input(placeholder="흡연 여부", required, type="text", name="Smoker", value=String(info.Smoker))
+        input(placeholder="음주 빈도", required, type='text', name='Fre_Drinking', value=info.Fre_Drinking)
+        input(placeholder="체형", type="text", name="Bodyform", value=info.Bodyform)
+        input(placeholder="취미", type='text', name='Hobby', value=info.Hobby)
+        input(placeholder="동성과 매칭되어도 괜찮습니까?", required, type="text", name="SameGender", value=String(info.SameGender))
+        input(placeholder="같은 전공인 사람과 매칭되어도 괜찮습니까?", required, type="text", name="SameMajor", value=String(info.SameMajor))
+        input(placeholder="병역 의무 완수자만을 원하십니까?", required, type='text', name='O_MilitaryService', value=String(info.O_MilitaryService))
+        input(placeholder="흡연자와의 매칭이 괜찮습니까?", required, type="text", name="O_Smoker", value=String(info.O_Smoker))
+        input(placeholder="원하시는 상대방의 음주 빈도를 선택해주세요.", required, type='text', name='O_Fre_Drinking', value=String(info.O_Fre_Drinking))
+        input(placeholder="매칭된 사람들", type='text', name='MatchedPeople', value=info.MatchedPeople.join(","))
+        input(placeholder="매칭된 사람들", type='text', name='MatchedScore', value=info.MatchedScore.join(","))
+        input(placeholder="매칭 완료", required, type='text', name='isMatched', value=String(info.isMatched))
+        input(placeholder="매칭이 성사된 사람", type='text', name='selectedPerson', value=info.selectedPerson)
+        input(type='submit', value='Submit')

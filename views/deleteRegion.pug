@@ -1,0 +1,9 @@
+extends base.pug
+
+block head
+    h1 Delete Region
+
+block content
+    form(method="POST", action="/regions/delete_process")
+        input(placeholder="지역", required, type="text", name="region")
+        input(type='submit', value='Submit')

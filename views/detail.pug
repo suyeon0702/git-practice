@@ -1,0 +1,11 @@
+extends base.pug
+include mixins/info
+
+block head 
+    title #{info.Name}
+
+block content 
+    h2 Details
+    +info(info)
+
+    a(class='button' href=`/`) HOME

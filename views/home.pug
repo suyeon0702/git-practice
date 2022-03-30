@@ -1,0 +1,22 @@
+extends base.pug
+include mixins/simple
+
+block head 
+    title Home
+
+block content 
+    h1 home!
+    h2 Informations:
+    each info in infos
+        +simple(info)
+    else 
+        li Sorry nothing found.
+    a(class='button' href='/getinfo') ADD
+    br
+    a(class='button' href='/delete') DELETE
+    br
+    a(class='button' href='/update') UPDATE
+    br
+    a(class='button' href='/regions') Regions
+    br
+    a(class='button' href='/matching') Matching

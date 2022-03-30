@@ -1,0 +1,9 @@
+extends base.pug
+
+block head
+    h1 Delete Information
+
+block content
+    form(method="POST", action="/delete_process")
+        input(placeholder="학번", required, type="text", name="STnumber")
+        input(type='submit', value='Submit')

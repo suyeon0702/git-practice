@@ -1,0 +1,28 @@
+extends base.pug
+
+block head
+    h1 Add New Informations
+
+block content
+    form(method="POST", action="/getinfo_process")
+        input(placeholder="학번", required, type="text", name="STnumber")
+        input(placeholder="이름", required, type='text', name='Name')
+        input(placeholder="성별", required, type='text', name='Gender')
+        input(placeholder="희망하는 만날 지역", required, type="text", name="Field")
+        input(placeholder="인스타그램 ID", type='text', name='instagramID')
+        input(placeholder="카카오톡 ID", required, type="text", name="kakaoID")
+        input(placeholder="매칭 종류", required, type="text", name="KoM")
+        input(placeholder="자신의 MBTI", required, type='text', name='OwnMBTI')
+        input(placeholder="원하는 상대방의 MBTI", type='text', name='WantedMBTI')
+        input(placeholder="전공", required, type="text", name="Major")
+        input(placeholder="병역 여부", required, type='text', name='MilitaryService')
+        input(placeholder="흡연 여부", required, type="text", name="Smoker")
+        input(placeholder="음주 빈도", required, type='text', name='Fre_Drinking')
+        input(placeholder="체형", type="text", name="Bodyform")
+        input(placeholder="취미", type='text', name='Hobby')
+        input(placeholder="동성과 매칭되어도 괜찮습니까?", required, type="text", name="SameGender")
+        input(placeholder="같은 전공인 사람과 매칭되어도 괜찮습니까?", required, type="text", name="SameMajor")
+        input(placeholder="병역 의무 완수자만을 원하십니까?", required, type='text', name='O_MilitaryService')
+        input(placeholder="흡연자와의 매칭이 괜찮습니까?", required, type="text", name="O_Smoker")
+        input(placeholder="원하시는 상대방의 음주 빈도를 선택해주세요.", required, type='text', name='O_Fre_Drinking')
+        input(type='submit', value='Submit')

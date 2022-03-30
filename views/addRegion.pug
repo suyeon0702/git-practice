@@ -1,0 +1,10 @@
+extends base.pug
+
+block head
+    h1 Add New Region
+
+block content
+    form(method="POST", action="/regions/add_process")
+        input(placeholder="지역 이름", required, type="text", name="region")
+        input(placeholder="지역 번호", required, type='text', name='regionNumber')
+        input(type='submit', value='Submit')
